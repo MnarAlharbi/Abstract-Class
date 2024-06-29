@@ -1,0 +1,21 @@
+abstract class Vehicle {
+    protected $make;
+    protected $model;
+
+    public function __construct($make, $model) {
+        $this->make = $make;
+        $this->model = $model;
+    }
+
+    public function startEngine() {
+        echo "Engine started";
+    }
+
+    abstract public function honk();
+}
+
+class Car extends Vehicle {
+    public function honk() {
+        echo "Car honking: Beep Beep!";
+    }
+}
